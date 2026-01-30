@@ -4,8 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Song for You 🎵</title>
+
 <!-- Google Font -->
 <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+
 <style>
 body {
   background: #fff0f5;
@@ -21,9 +23,9 @@ body {
 .card {
   background: white;
   border-radius: 20px;
-  padding: 40px;
-  max-width: 600px;
-  width: 90%;
+  padding: 40px 50px;
+  max-width: 850px; /* wider card */
+  width: 95%;
   text-align: center;
   box-shadow: 0 10px 30px rgba(0,0,0,0.15);
 }
@@ -35,23 +37,31 @@ h1 {
 
 iframe {
   width: 100%;
-  height: 315px;
+  height: 360px;
   border: none;
   border-radius: 15px;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 .song-text {
-  margin-top: 15px;
+  margin-top: 10px;
   font-size: 18px;
-  color: #ff4d88;
-  line-height: 1.6;
-  text-align: center;
+  color: #000; /* black text */
+  line-height: 1.7;
+  text-align: left; /* easier to read long text */
+}
+
+/* Highlighted lyrics */
+.lyric {
+  font-weight: bold;
+  background: #ffe0ec;
+  padding: 2px 6px;
+  border-radius: 6px;
 }
 
 button {
-  margin-top: 20px;
-  padding: 12px 24px;
+  margin-top: 30px;
+  padding: 12px 28px;
   font-size: 18px;
   border: none;
   border-radius: 12px;
@@ -68,18 +78,30 @@ button {
   <h1>A Song That Reminds Me of You</h1>
   
   <!-- YouTube embed -->
-  <iframe src="https://www.youtube.com/embed/JSxzqeSi9NQ?autoplay=0&rel=0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <iframe 
+    src="https://www.youtube.com/embed/JSxzqeSi9NQ?rel=0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen>
+  </iframe>
 
-  <!-- Custom text area -->
   <div class="song-text">
-    It's a lil gay, but idgaf it's physically impossible for me to hear this song without thinking about you<br>
-    I honestly couldn't even tell you where I first heard it, but there are a couple of standout lines to me. <br>
-    "You can act all shy But you know that I want you" makes me think back to how shy/guarded you were when we were first going out. I was really nervous the first couple times we hung out lol but I always loved being affectionate and seeing you try to stay nonchalant while I was loving up on you. <br>
-    "So terrified of the road that takes you... Me too" I know how anxious or nervous you can be thinking about the future, and in a lot of ways, I feel the same way. I'll always be there to comfort you and support you. The one thing I *am* certain of is us. You're a part of every path I have moving forward Gab. <br>
-    "Everyone adores you At least I do" and "Everybody thinks of you when they sleep at night When I say everybody I'm actually referring to me" I think so many people *do* adore you, there's so much to love, and I've said this before, I think you have such a magnetic presence. I know sometimes you have doubts about being lovable, but I promise Gabby, loving you comes so easy and there's no part of you that I don't adore. And even tho the next line is kinda fucking stupid lmfao, I do always think of you when I'm asleep at night. When I'm not with you, my bed feels so much bigger and emptier. You're the last person I want to talk to, and you're my favorite way to end my day.  
+    It's a lil gay, but idgaf — it's physically impossible for me to hear this song without thinking about you.<br><br>
+
+    I honestly couldn't even tell you where I first heard it, but there are a couple of standout lines to me.<br><br>
+
+    <span class="lyric">"You can act all shy but you know that I want you"</span> makes me think back to how shy/guarded you were when we were first going out. I was really nervous the first couple times we hung out lol, but I always loved being affectionate and seeing you try to stay nonchalant while I was loving up on you.<br><br>
+
+    <span class="lyric">"So terrified of the road that takes you… me too"</span> — I know how anxious or nervous you can be thinking about the future, and in a lot of ways, I feel the same way. I'll always be there to comfort you and support you. The one thing I <em>am</em> certain of is us. You're a part of every path I have moving forward, Gab.<br><br>
+
+    <span class="lyric">"Everyone adores you, at least I do"</span> and 
+    <span class="lyric">"Everybody thinks of you when they sleep at night — when I say everybody I'm actually referring to me"</span> —
+    I think so many people *do* adore you. There's so much to love, and I've said this before, but you have such a magnetic presence. I know sometimes you have doubts about being lovable, but I promise Gabby, loving you comes so easy and there's no part of you that I don't adore.<br><br>
+
+    And even though the next line is kinda fucking stupid lmfao, I really do always think of you when I'm asleep at night. When I'm not with you, my bed feels so much bigger and emptier. You're the last person I want to talk to, and you're my favorite way to end my day.
   </div>
 
   <button onclick="window.location.href='yes-response.html'">Back 💖</button>
+
 </div>
 
 </body>
