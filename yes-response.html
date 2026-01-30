@@ -4,51 +4,64 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>YAY! 💖</title>
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
 <style>
-body {
-  background: linear-gradient(135deg, #ffe6f0, #ffd6e8);
-  font-family: Arial, sans-serif;
-  margin: 0;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.card {
-  background: white;
-  border-radius: 20px;
-  padding: 40px;
-  text-align: center;
-  max-width: 400px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-}
-img {
-  width: 200px;
-  border-radius: 15px;
-  margin-bottom: 20px;
-}
-h1 { color: #ff4d88; }
-button {
-  font-size: 18px;
-  padding: 12px 24px;
-  border: none;
-  border-radius: 12px;
-  cursor: pointer;
-  margin: 10px;
-  background: #ff4d88;
-  color: white;
-  transition: transform 0.2s;
-}
-button:hover { transform: scale(1.05); }
+  body {
+    background: linear-gradient(135deg, #ffe6f0, #ffd6e8);
+    font-family: 'Lilita One', cursive;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card {
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    text-align: center;
+    max-width: 400px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    position: relative;
+  }
+
+  img {
+    width: 200px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+  }
+
+  h1 { color: #ff4d88; }
+
+  button {
+    font-size: 18px;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    margin: 10px;
+    background: #ff4d88;
+    color: white;
+    transition: transform 0.2s;
+  }
+
+  button:hover {
+    transform: scale(1.05);
+  }
 </style>
 </head>
 <body>
+
 <div class="card">
   <img src="https://media.giphy.com/media/l0MYt5jPR6QX5pnqM/giphy.gif" alt="Hearts GIF">
   <h1>YAY! 💕 You said yes!</h1>
   <p>Choose what you’d like to see:</p>
+
   <button onclick="window.location.href='letter.html'">Love Letter / Text 💌</button>
   <button onclick="window.location.href='song.html'">Song 🎵</button>
 </div>
+
 </body>
 </html>
