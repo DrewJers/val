@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Song 🎵</title>
+<title>Song for You 🎵</title>
 <!-- Google Font -->
 <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
 <style>
@@ -12,8 +12,9 @@ body {
   font-family: 'Lilita One', cursive;
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 100vh;
+  align-items: flex-start;
+  padding-top: 40px;
+  min-height: 100vh;
   margin: 0;
 }
 
@@ -21,14 +22,27 @@ body {
   background: white;
   border-radius: 20px;
   padding: 40px;
-  max-width: 400px;
+  max-width: 600px;
+  width: 90%;
   text-align: center;
   box-shadow: 0 10px 30px rgba(0,0,0,0.15);
 }
 
 img {
-  width: 200px;
+  width: 250px;
   margin-bottom: 20px;
+  border-radius: 15px;
+}
+
+h1 {
+  color: #ff4d88;
+  margin-bottom: 20px;
+}
+
+iframe {
+  width: 100%;
+  height: 315px;
+  border: none;
   border-radius: 15px;
 }
 
@@ -42,22 +56,19 @@ button {
   background: #ff4d88;
   color: white;
 }
-
-audio {
-  margin-top: 20px;
-  width: 100%;
-}
 </style>
 </head>
 <body>
 
 <div class="card">
-  <img src="https://media.giphy.com/media/l0MYt5jPR6QX5pnqM/giphy.gif" alt="Music GIF">
-  <h1>Here’s a song that reminds me of you 🎵</h1>
-  <audio controls>
-    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-  </audio>
+  <!-- Optional local image -->
+  <img src="me_n_gab.jpg" alt="Us 💕">
+
+  <h1>A Song That Reminds Me of You</h1>
+  
+  <!-- YouTube embed -->
+  <iframe src="https://www.youtube.com/embed/JSxzqeSi9NQ?autoplay=0&rel=0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
   <button onclick="window.location.href='yes-response.html'">Back 💖</button>
 </div>
 
