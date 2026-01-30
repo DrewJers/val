@@ -14,6 +14,7 @@
     justify-content: center;
     align-items: center;
   }
+
   .card {
     background: white;
     border-radius: 20px;
@@ -23,14 +24,17 @@
     box-shadow: 0 10px 30px rgba(0,0,0,0.15);
     position: relative;
   }
+
   img {
     width: 200px;
     border-radius: 15px;
     margin-bottom: 20px;
   }
+
   h1 {
     color: #ff4d88;
   }
+
   button {
     font-size: 18px;
     padding: 12px 24px;
@@ -40,15 +44,26 @@
     margin: 10px;
     transition: transform 0.2s;
   }
+
   #yesBtn {
     background: #ff4d88;
     color: white;
   }
+
   #noBtn {
     background: #ccc;
+    position: absolute; /* necessary for movement */
+    transition: left 0.8s ease, top 0.8s ease; /* smooth sliding */
   }
+
   button:hover {
     transform: scale(1.05);
+  }
+
+  #response {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #ff4d88;
   }
 </style>
 </head>
@@ -57,16 +72,16 @@
 <div class="card">
   <!-- Cute GIF / Image -->
   <img src="https://media.giphy.com/media/l0MYt5jPR6QX5pnqM/giphy.gif" alt="Hearts GIF">
-  
-  <h1>Will you be my Valentine? 💘</h1>
-  <p>You make my days brighter just by being you!</p>
-  
+
+  <h1>Hey baby, will you be my Valentine? 💘</h1>
+  <p>YI know you'd say yes :)</p>
+
   <!-- Buttons -->
   <button id="yesBtn" onclick="sayYes()">Yes 💕</button>
   <button id="noBtn">No 💔</button>
 
   <!-- Response message -->
-  <p id="response" style="margin-top:20px;"></p>
+  <p id="response"></p>
 </div>
 
 <script>
@@ -78,15 +93,16 @@
     document.getElementById('noBtn').style.display = 'none';
   }
 
-  // NO button logic (dodges cursor)
+  // NO button logic (dodges cursor smoothly)
   const noBtn = document.getElementById('noBtn');
   noBtn.addEventListener('mouseenter', () => {
     const card = document.querySelector('.card');
     const maxX = card.clientWidth - noBtn.offsetWidth;
     const maxY = card.clientHeight - noBtn.offsetHeight;
+
     const randomX = Math.floor(Math.random() * maxX);
     const randomY = Math.floor(Math.random() * maxY);
-    noBtn.style.position = 'absolute';
+
     noBtn.style.left = randomX + 'px';
     noBtn.style.top = randomY + 'px';
   });
