@@ -4,10 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Be My Valentine 💖</title>
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
 <style>
   body {
     background: linear-gradient(135deg, #ffe6f0, #ffd6e8);
-    font-family: Arial, sans-serif;
+    font-family: 'Lilita One', cursive;
     margin: 0;
     height: 100vh;
     display: flex;
@@ -52,8 +54,8 @@
 
   #noBtn {
     background: #ccc;
-    position: absolute; /* necessary for movement */
-    transition: left 0.8s ease, top 0.8s ease; /* smooth sliding */
+    position: absolute;
+    transition: left 0.8s ease, top 0.8s ease;
   }
 
   button:hover {
@@ -64,31 +66,27 @@
 <body>
 
 <div class="card">
-  <!-- Cute GIF / Image -->
   <img src="https://media.giphy.com/media/l0MYt5jPR6QX5pnqM/giphy.gif" alt="Hearts GIF">
-
   <h1>Will you be my Valentine? 💘</h1>
   <p>You make my days brighter just by being you!</p>
 
-  <!-- Buttons -->
   <button id="yesBtn" onclick="window.location.href='yes-response.html'">Yes 💕</button>
   <button id="noBtn">No 💔</button>
 </div>
 
 <script>
-  // NO button logic (dodges cursor smoothly)
-  const noBtn = document.getElementById('noBtn');
-  noBtn.addEventListener('mouseenter', () => {
-    const card = document.querySelector('.card');
-    const maxX = card.clientWidth - noBtn.offsetWidth;
-    const maxY = card.clientHeight - noBtn.offsetHeight;
+const noBtn = document.getElementById('noBtn');
+noBtn.addEventListener('mouseenter', () => {
+  const card = document.querySelector('.card');
+  const maxX = card.clientWidth - noBtn.offsetWidth;
+  const maxY = card.clientHeight - noBtn.offsetHeight;
 
-    const randomX = Math.floor(Math.random() * maxX);
-    const randomY = Math.floor(Math.random() * maxY);
+  const randomX = Math.floor(Math.random() * maxX);
+  const randomY = Math.floor(Math.random() * maxY);
 
-    noBtn.style.left = randomX + 'px';
-    noBtn.style.top = randomY + 'px';
-  });
+  noBtn.style.left = randomX + 'px';
+  noBtn.style.top = randomY + 'px';
+});
 </script>
 
 </body>
