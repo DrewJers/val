@@ -1,52 +1,95 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Be My Valentine 💘</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-    body {
-      background: linear-gradient(135deg, #ffe6f0, #ffd6e8);
-      height: 100vh;
-      margin: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-family: Arial, sans-serif;
-    }
-    .card {
-      background: white;
-      padding: 40px;
-      border-radius: 20px;
-      text-align: center;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-      max-width: 350px;
-    }
-    button {
-      margin-top: 20px;
-      font-size: 18px;
-      padding: 12px 24px;
-      background: #ff4d88;
-      color: white;
-      border: none;
-      border-radius: 12px;
-      cursor: pointer;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Be My Valentine 💖</title>
+<style>
+  body {
+    background: linear-gradient(135deg, #ffe6f0, #ffd6e8);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .card {
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    text-align: center;
+    max-width: 400px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    position: relative;
+  }
+  img {
+    width: 200px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+  }
+  h1 {
+    color: #ff4d88;
+  }
+  button {
+    font-size: 18px;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    margin: 10px;
+    transition: transform 0.2s;
+  }
+  #yesBtn {
+    background: #ff4d88;
+    color: white;
+  }
+  #noBtn {
+    background: #ccc;
+  }
+  button:hover {
+    transform: scale(1.05);
+  }
+</style>
 </head>
 <body>
 
 <div class="card">
-  <h1>Will you be my Valentine? 💖</h1>
-  <p>You make my favorite moments better just by being there.</p>
-  <button onclick="yes()">Yes 💕</button>
-  <p id="response"></p>
+  <!-- Cute GIF / Image -->
+  <img src="https://media.giphy.com/media/l0MYt5jPR6QX5pnqM/giphy.gif" alt="Hearts GIF">
+  
+  <h1>Will you be my Valentine? 💘</h1>
+  <p>You make my days brighter just by being you!</p>
+  
+  <!-- Buttons -->
+  <button id="yesBtn" onclick="sayYes()">Yes 💕</button>
+  <button id="noBtn">No 💔</button>
+
+  <!-- Response message -->
+  <p id="response" style="margin-top:20px;"></p>
 </div>
 
 <script>
-  function yes() {
-    document.getElementById("response").innerHTML =
-      "I was really hoping you’d say yes 🥰<br>Can’t wait to celebrate with you 💐";
+  // YES button logic
+  function sayYes() {
+    document.getElementById('response').innerHTML = 
+      "YAY 🥰 I was hoping you’d say yes! Can’t wait to celebrate 💐";
+    document.getElementById('yesBtn').style.display = 'none';
+    document.getElementById('noBtn').style.display = 'none';
   }
+
+  // NO button logic (dodges cursor)
+  const noBtn = document.getElementById('noBtn');
+  noBtn.addEventListener('mouseenter', () => {
+    const card = document.querySelector('.card');
+    const maxX = card.clientWidth - noBtn.offsetWidth;
+    const maxY = card.clientHeight - noBtn.offsetHeight;
+    const randomX = Math.floor(Math.random() * maxX);
+    const randomY = Math.floor(Math.random() * maxY);
+    noBtn.style.position = 'absolute';
+    noBtn.style.left = randomX + 'px';
+    noBtn.style.top = randomY + 'px';
+  });
 </script>
 
 </body>
