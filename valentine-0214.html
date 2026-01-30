@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Be My Valentine 💘</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      background: linear-gradient(135deg, #ffe6f0, #ffd6e8);
+      height: 100vh;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+    }
+    .card {
+      background: white;
+      padding: 40px;
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+      max-width: 350px;
+    }
+    button {
+      margin-top: 20px;
+      font-size: 18px;
+      padding: 12px 24px;
+      background: #ff4d88;
+      color: white;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<div class="card">
+  <h1>Will you be my Valentine? 💖</h1>
+  <p>You make my favorite moments better just by being there.</p>
+  <button onclick="yes()">Yes 💕</button>
+  <p id="response"></p>
+</div>
+
+<script>
+  function yes() {
+    document.getElementById("response").innerHTML =
+      "I was really hoping you’d say yes 🥰<br>Can’t wait to celebrate with you 💐";
+  }
+</script>
+
+</body>
+</html>
