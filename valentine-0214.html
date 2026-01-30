@@ -59,12 +59,6 @@
   button:hover {
     transform: scale(1.05);
   }
-
-  #response {
-    margin-top: 20px;
-    font-size: 16px;
-    color: #ff4d88;
-  }
 </style>
 </head>
 <body>
@@ -73,26 +67,15 @@
   <!-- Cute GIF / Image -->
   <img src="https://media.giphy.com/media/l0MYt5jPR6QX5pnqM/giphy.gif" alt="Hearts GIF">
 
-  <h1>Hey baby, will you be my Valentine? 💘</h1>
-  <p>YI know you'd say yes :)</p>
+  <h1>Will you be my Valentine? 💘</h1>
+  <p>You make my days brighter just by being you!</p>
 
   <!-- Buttons -->
-  <button id="yesBtn" onclick="sayYes()">Yes 💕</button>
+  <button id="yesBtn" onclick="window.location.href='yes-response.html'">Yes 💕</button>
   <button id="noBtn">No 💔</button>
-
-  <!-- Response message -->
-  <p id="response"></p>
 </div>
 
 <script>
-  // YES button logic
-  function sayYes() {
-    document.getElementById('response').innerHTML = 
-      "YAY 🥰 I was hoping you’d say yes! Can’t wait to celebrate 💐";
-    document.getElementById('yesBtn').style.display = 'none';
-    document.getElementById('noBtn').style.display = 'none';
-  }
-
   // NO button logic (dodges cursor smoothly)
   const noBtn = document.getElementById('noBtn');
   noBtn.addEventListener('mouseenter', () => {
