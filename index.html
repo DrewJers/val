@@ -3,16 +3,31 @@
 <head>
   <title>💌</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Lilita One font -->
+  <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
   <style>
     body {
-      background: #111;
-      color: white;
-      font-family: Arial, sans-serif;
+      background: #ffe6ea; /* light red/pink background */
+      color: #ff1a66;
+      font-family: 'Lilita One', cursive;
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
       text-align: center;
+      margin: 0;
+    }
+    .container {
+      background: white;
+      border-radius: 20px;
+      padding: 40px;
+      max-width: 500px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+    img {
+      width: 200px;
+      border-radius: 15px;
+      margin-bottom: 20px;
     }
     input, button {
       padding: 10px;
@@ -26,32 +41,38 @@
       color: white;
       cursor: pointer;
     }
+    #error {
+      color: #ff8080;
+      margin-top: 10px;
+    }
   </style>
 </head>
 <body>
 
-<div>
-  <h2>Wassup princess :) I have a surpirse for you but you need to guess the secret password first</h2>
-  <p>What did you order our first night out at the Broadway Diner in Bayonne (why tf is the BROADWAY diner in Bayonne, I'll never get over this shit) (Also all lower-case!!!)</p>
+<div class="container">
+  <!-- Local image -->
+  <img src="3-snoopy-woodstock-john-m-hasting.jpg" alt="Valentine Image">
+
+  <h2>Wassup princess :) I have a surprise for you but FIRST you need to answer my riddle...</h2>
+  <p><strong></strong> What did you order on our first night out at the Broadway Diner (sidenote--why tf is the BROADWAY diner in Bayonne? and the Bayonne diner is in NEWARK?? I'll never get over this shit) (Also all lower-case!!!)</p>
   <input id="password" type="text" placeholder="Enter answer">
   <br>
   <button onclick="unlock()">Unlock 💖</button>
-  <p id="error" style="color:#ff8080;"></p>
+  <p id="error"></p>
 </div>
 
 <script>
   function unlock() {
-    const answer = "grilled cheese"; // CHANGE THIS
+    const answer = "grilled cheese"; // pass
     const input = document.getElementById("password").value.toLowerCase();
 
     if (input === answer) {
       window.location.href = "valentine-0214.html";
     } else {
-      document.getElementById("error").innerText = "Try again 💔";
+      document.getElementById("error").innerText = "Wallahi how did you not remember...";
     }
   }
 </script>
 
 </body>
 </html>
-<!-- trigger pages -->
