@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Be My Valentine 💖</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background: linear-gradient(135deg, #ffe6f0, #ffd6e8);
+      height: 100vh;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Arial', sans-serif;
+    }
+    .card {
+      background: white;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+      text-align: center;
+      max-width: 350px;
+    }
+    h1 {
+      color: #ff4d88;
+    }
+    button {
+      margin-top: 20px;
+      font-size: 18px;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      background: #ff4d88;
+      color: white;
+      transition: transform 0.2s;
+    }
+    button:hover {
+      transform: scale(1.05);
+    }
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+<div class="card">
+  <h1>Will you be my Valentine? 💘</h1>
+  <p>You make every day brighter just by being you.</p>
+  <button onclick="showYes()">Yes 💕</button>
+
+  <div id="yesMessage" class="hidden">
+    <h2>YAY 🥰</h2>
+    <p>I can’t wait to spend Valentine’s Day with you 💐</p>
+  </div>
+</div>
+
+<script>
+  function showYes() {
+    document.querySelector("button").style.display = "none";
+    document.getElementById("yesMessage").classList.remove("hidden");
+  }
+</script>
+
+</body>
+</html>
