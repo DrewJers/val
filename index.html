@@ -63,16 +63,17 @@
 
 <script>
   function unlock() {
-    const answer = "grilled cheese"; // pass
-    const input = document.getElementById("password").value.toLowerCase();
+    const input = document.getElementById("password").value.toLowerCase().trim();
 
-    if (input === answer) {
+    if (input === "grilled cheese" || input === "fries") {
       window.location.href = "valentine-0214.html";
     } else {
-      document.getElementById("error").innerText = "Wallahi how did you not remember...";
+      document.getElementById("error").innerText =
+        "Wallahi how did you not remember...";
     }
   }
 </script>
+
 
 </body>
 </html>
